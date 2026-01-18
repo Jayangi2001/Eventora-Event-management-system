@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Eventora</title>
+  <style>
+    /* Reset and base styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f0f2f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      background-color: #967b2aff;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header h1 {
+      font-size: 32px;
+    }
+
+    /* Container */
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 0 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    }
+
+    .container h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #967b2aff;
+      font-size: 28px;
+      padding-top: 20px;
+    }
+
+    /* Form styling */
+    .event-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      padding: 0 20px 30px 20px;
+    }
+
+    .event-form input,
+    .event-form textarea {
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      resize: none;
+    }
+
+    .event-form textarea {
+      min-height: 120px;
+    }
+
+    .event-form button {
+      background-color: #967b2aff;
+      color: white;
+      padding: 12px;
+      font-size: 18px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .event-form button:hover {
+      background-color: #b28f6fff;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 50px;
+    }
+
+    /* Responsive */
+    @media (max-width: 500px) {
+      .container {
+        margin: 30px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Eventora</h1>
+</header>
+
+<section class="container">
+  <h2>Contact Us</h2>
+
+  <form class="event-form">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Email" required>
+    <textarea placeholder="Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 Eventora. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

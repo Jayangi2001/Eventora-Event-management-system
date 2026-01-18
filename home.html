@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  <style>
+    /* Full-page background */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-image: url("eventora.png"); 
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+      color: white;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    /* Overlay for readability */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+      z-index: 0;
+    }
+
+    /* Main content on top of overlay */
+    .content {
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      margin: 10px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background-color: rgb(230, 134, 187);
+      color: white;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #b28f6fff;
+    }
+
+    #dateTime {
+      margin-top: 30px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="content">
+    <h1>Welcome to Eventora...</h1>
+    <p>Explore our services and join us today!</p>
+
+    <!-- New buttons -->
+    <button onclick="goToEvents()">Events</button>
+    <button onclick="goToContact()">Contact Us</button>
+    <button onclick="goToCreateEvent()">Create Event</button>
+
+    <div id="dateTime"></div>
+  </div>
+
+  <footer>
+   <p>© 2026 Eventora. All rights reserved.</p>
+  </footer>
+
+  <script>
+    
+      displayDateTime();
+    
+
+    // Navigate to Events page
+    function goToEvents() {
+      window.location.href = "events.html";
+    }
+
+    // Navigate to Contact Us page
+    function goToContact() {
+      window.location.href = "contact.html";
+    }
+
+    // Navigate to Create Event page
+    function goToCreateEvent() {
+      window.location.href = "create.html";
+    }
+
+    // Display dynamic date & time
+    function displayDateTime() {
+      const now = new Date();
+      const dateTimeString = now.toLocaleString();
+      document.getElementById("dateTime").innerText = "Current Date & Time: " + dateTimeString;
+      setTimeout(displayDateTime, 1000);
+    }
+  </script>
+
+  
+
+</body>
+</html>

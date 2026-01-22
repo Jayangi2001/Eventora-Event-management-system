@@ -14,10 +14,10 @@
 
 ## Contributions
 - Member 1:
-  - Created CI/CD workflows (ci.yml, deploy.yml)
-  - Deployment preparation
-  - Merge feature branches in to develop
+  - Created CI/CD workflows. (ci.yml, deploy.yml)
+  - Deployment preparation.
+  - Merge feature branches in to develop.
 - Member 2:
-  - Developed UI pages (home.html, events.html, contact.html, create.html)
-  - Added forms and styling (style.css)
-  - Added UI features and tested responsiveness
+  - Developed UI pages. (home.html, events.html, contact.html, create.html)
+  - Added forms and styling. (style.css)
+  - Added UI features and tested responsiveness.

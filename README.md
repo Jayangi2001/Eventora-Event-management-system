@@ -10,7 +10,8 @@
 - Member 2: UI/Frontend (HTML, CSS, forms, pages)
 
 ## Live URL
-- https://app.netlify.com/teams/jayangi2001/projects
+   Click here to view site
+- https://capable-jalebi-8d1d71.netlify.app/
 
 ## Contributions
 - Member 1:

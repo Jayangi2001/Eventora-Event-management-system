@@ -1,5 +1,10 @@
 body {
-  background: linear-gradient(to right, #f5f0f3, #e9a6c9);
+  background: 
+    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+    url("eventora.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   font-family: Verdana, sans-serif;
   margin: 0;
   padding: 0;

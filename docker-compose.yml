@@ -3,5 +3,27 @@ version: '3.8'
 services:
   web:
     build: .
+    container_name: eventora-web
     ports:
-      - "8080:80"
+      - "8080:8080"
+    networks:
+      - eventora-network
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://127.0.0.1:8080/ || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 15s
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: 128M
+        reservations:
+          cpus: "0.25"
+          memory: 64M
+    restart: unless-stopped
+
+networks:
+  eventora-network:
+    driver: bridge

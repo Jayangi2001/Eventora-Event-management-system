@@ -43,12 +43,6 @@ http://localhost:8080
 docker-compose down
 ```
 
-### Alternative: Build and run with plain Docker (without Compose)
-```bash
-docker build -t eventora .
-docker run -d -p 8080:8080 --name eventora-web eventora
-```
-
 ### Configuration
 This is a static front-end application (HTML/CSS/JS) served by nginx. There are no environment variables, databases, or external services required to run it.
 
@@ -57,12 +51,6 @@ This is a static front-end application (HTML/CSS/JS) served by nginx. There are 
 - A Docker `HEALTHCHECK` is configured to verify the nginx process is responding.
 - Resource limits (0.5 CPU / 128MB memory) are set in `docker-compose.yml` to prevent unbounded resource usage.
 
-### Troubleshooting
-| Issue | Solution |
-|---|---|
-| Port 8080 already in use | Change the host port in `docker-compose.yml`, e.g. `"8081:8080"` |
-| `docker-compose` command not found | Use `docker compose` (no hyphen) if using Docker Compose v2 plugin |
-| Container exits immediately | Run `docker logs eventora-web` to inspect the error |
 
 ## Project Structure
 ```
